@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">FEFU 2025 Android Base repo</string>
-    <string name="title_activity_second">SecondActivity</string>
-    <string name="main_activity_string">Hello from Main!</string>
+    <string name="app_name">android-repo</string>
+    <string name="add">Add</string>
 </resources>

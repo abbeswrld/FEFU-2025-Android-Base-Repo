@@ -1,35 +1,28 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="16dp"
-        tools:context=".MainActivity">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/main_string"
-            android:layout_width="wrap_content"
+        <co.feip.fefu2025.FlexBoxLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/main_activity_string"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:paddingBottom="16dp"
-            tools:text="Main Activity" />
+            android:layout_gravity="top" />
 
-        <TextView
-            android:id="@+id/counter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:focusable="true"
-            android:textAlignment="center"
-            android:textSize="60sp"
-            android:text="0"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:foreground="?attr/selectableItemBackgroundBorderless"
-            tools:text="42" />
-    </LinearLayout>
-</layout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="@string/add" />
+
+</LinearLayout>
