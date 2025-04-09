@@ -1,4 +1,4 @@
-package co.feip.fefu2025
+package co.feip.fefu2025.presentation.component
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -6,6 +6,7 @@ import android.util.AttributeSet
 import android.widget.LinearLayout
 import android.view.View
 import android.widget.TextView
+import co.feip.fefu2025.R
 
 class LanguageView @JvmOverloads constructor(
     context: Context,
@@ -16,14 +17,11 @@ class LanguageView @JvmOverloads constructor(
     private val percentage: TextView
 
     init {
-        try {
-            inflate(context, R.layout.layout_language_view, this)
-            colorCircle = findViewById(R.id.colorCircle)
-            languageName = findViewById(R.id.languageName)
-            percentage = findViewById(R.id.percentage)
-        } catch (e: Exception) {
-            throw RuntimeException("Failed to inflate LanguageView", e)
-        }
+        inflate(context, R.layout.layout_language_view, this)
+        colorCircle = findViewById(R.id.colorCircle)
+        languageName = findViewById(R.id.languageName)
+        percentage = findViewById(R.id.percentage)
+
     }
     fun setLanguageName(name: String) {
         languageName.text = name
